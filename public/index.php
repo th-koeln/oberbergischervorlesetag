@@ -26,3 +26,13 @@ require "index.html";
         </div>
     </div>
 </section>
+
+<aside class="bg-dark">
+    <div class="container text-center">
+        <div class="call-to-action">
+            <h2>Free Download at Start Bootstrap!</h2>
+            <a href="http://startbootstrap.com/template-overviews/creative/" class="btn btn-default btn-xl sr-button">Download
+                Now!</a>
+        </div>
+    </div>
+</aside>

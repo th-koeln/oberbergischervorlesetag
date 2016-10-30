@@ -1,7 +1,6 @@
 @import _variables.sass
 @import _mixins.sass
 
-
 // Global Components
 html, body
   height: 100%
@@ -44,6 +43,8 @@ p
 
 section
   padding: 100px 0
+  position: relative
+  z-index: 10
 
 aside
   padding: 50px 0
@@ -51,10 +52,9 @@ aside
 .no-padding
   padding: 0
 
-
 // Navigation
 .navbar-default
-  background-color: white
+  background-color: $theme-opaque
   border-color: opacify($gray-darker, 0.05)
   @include sans-serif-font
   @include transition-all
@@ -62,7 +62,7 @@ aside
   .navbar-header .navbar-brand
     color: $theme-primary
     @include sans-serif-font
-    font-weight: 700
+    font-weight: 600
     text-transform: uppercase
 
     &:hover, &:focus
@@ -79,9 +79,10 @@ aside
       > a,
       > a:focus
         text-transform: uppercase
-        font-weight: 700
-        font-size: 13px
+        font-weight: 400
+        font-size: 16px
         color: $gray-darker
+
         &:hover
           color: $theme-primary
 
@@ -90,16 +91,18 @@ aside
         > a:focus
           color: $theme-primary !important
           background-color: transparent
+
           &:hover
             background-color: transparent
 
   @media (min-width: 768px)
-    background-color: white
+    background-color: $theme-opaque
     border-color: opacify($theme-primary, 0.05)
 
     .navbar-header .navbar-brand
       color: $theme-primary
-      font-size: 14px
+      font-size: 20px
+      font-weight: 600
 
       &:hover, &:focus
         color: darken($theme-primary, 10%)
@@ -110,7 +113,6 @@ aside
       &:hover
         color: $theme-primary
 
-
 // Homepage Header
 header
   position: relative
@@ -119,6 +121,18 @@ header
   background: url("../img/header.jpg") center
   text-align: center
   color: white
+  overflow: hidden
+
+  &:after
+    content: ""
+    position: absolute
+    width: 150%
+    height: 60%
+    top: 16%
+    left: -10%
+    background: transparent
+    transform-origin: center
+    transform: rotate(-5deg)
 
   .header-content
     position: relative
@@ -127,6 +141,11 @@ header
     width: 100%
 
     .header-content-inner
+      background-color: rgba(34, 34, 34, 0.55)
+      padding: 25px 0
+      position: relative
+      z-index: 10
+
       h1
         font-weight: 700
         text-transform: uppercase
@@ -146,6 +165,9 @@ header
   @media (min-width: 768px)
     min-height: 100%
 
+    &:after
+      background: rgba(34, 34, 34, 0.55)
+
     .header-content
       position: absolute
       top: 50%
@@ -153,8 +175,11 @@ header
       -ms-transform: translateY(-50%)
       transform: translateY(-50%)
       padding: 0 50px
+      z-index: 10
 
       .header-content-inner
+        background-color: transparent
+        padding: 25px 0
         max-width: 1000px
         margin-left: auto
         margin-right: auto
@@ -167,7 +192,6 @@ header
           max-width: 80%
           margin-left: auto
           margin-right: auto
-
 
 // Sections
 .section-heading
@@ -239,22 +263,20 @@ header
   h2
     margin: 0 auto 20px
 
-
 // Bootstrap Overrides
 .text-primary
-  color: $theme-primary
+  color: $theme-secondary
 
 .no-gutter > [class*='col-']
   padding-right: 0
   padding-left: 0
-
 
 // Button Styles
 .btn-default
   @include button-variant($gray-darker, white, white)
 
 .btn-primary
-  @include button-variant(white, $theme-primary, $theme-primary)
+  @include button-variant(white, $theme-secondary, $theme-secondary)
 
 .btn
   @include sans-serif-font
@@ -265,7 +287,6 @@ header
 
 .btn-xl
   padding: 15px 30px
-
 
 // Extras
 // -- Highlight Color Customization
