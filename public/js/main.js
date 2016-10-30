@@ -46,10 +46,25 @@
     }, 300);
 
     // Initialize and Configure Magnific Popup Lightbox Plugin
+    $.extend(true, $.magnificPopup.defaults, {
+        tClose: 'Schließen (Esc)', // Alt text on close button
+        tLoading: 'Lädt...', // Text that is displayed during loading. Can contain %curr% and %total% keys
+        gallery: {
+            tPrev: 'Vorheriges (Linke Pfeiltaste)', // Alt text on left arrow
+            tNext: 'Nächstes (Rechte Pfeiltaste)', // Alt text on right arrow
+            tCounter: '%curr% von %total%' // Markup for "1 of 7" counter
+        },
+        image: {
+            tError: '<a href="%url%">Das Bild #%curr%</a> konnte nicht geladen werden' // Error message when image could not be loaded
+        },
+        ajax: {
+            tError: '<a href="%url%">Der Inhalt</a> konnte nicht geladen werden' // Error message when ajax request failed
+        }
+    });
     $('.popup-gallery').magnificPopup({
         delegate: 'a',
         type: 'image',
-        tLoading: 'Loading image #%curr%...',
+        tLoading: 'Lade Bild #%curr%...',
         mainClass: 'mfp-img-mobile',
         gallery: {
             enabled: true,
@@ -57,8 +72,7 @@
             preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
         },
         image: {
-            tError: '<a href="%url%">The image #%curr%</a> could not be loaded.'
+            tError: '<a href="%url%">Das Bild #%curr%</a> konnte nicht geladen werden'
         }
     });
-
 })(jQuery); // End of use strict

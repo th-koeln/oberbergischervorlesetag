@@ -1,6 +1,7 @@
 @import _variables.sass
 @import _mixins.sass
 
+
 // Global Components
 html, body
   height: 100%
@@ -39,7 +40,7 @@ p
   color: white
 
 .text-faded
-  color: opacify(white, 70%)
+  color: opacify(white, 0.7)
 
 section
   padding: 100px 0
@@ -50,10 +51,11 @@ aside
 .no-padding
   padding: 0
 
+
 // Navigation
 .navbar-default
   background-color: white
-  border-color: opacify($gray-darker, 5%)
+  border-color: opacify($gray-darker, 0.05)
   @include sans-serif-font
   @include transition-all
 
@@ -91,51 +93,39 @@ aside
           &:hover
             background-color: transparent
 
-@media (min-width: 768px)
-  background-color: transparent
-  border-color: opacify(white, 30%)
-  .navbar-header .navbar-brand
-    color: opacify(white, 70%)
-    &:hover,
-    &:focus
-      color: white
-
-  .nav > li > a,
-  .nav > li > a:focus
-    color: opacify(white, 70%)
-    &:hover
-      color: white
-
-  &.affix
+  @media (min-width: 768px)
     background-color: white
-    border-color: opacify($gray-darker, 5%)
+    border-color: opacify($theme-primary, 0.05)
+
     .navbar-header .navbar-brand
       color: $theme-primary
       font-size: 14px
-      &:hover,
-      &:focus
+
+      &:hover, &:focus
         color: darken($theme-primary, 10%)
 
-    .nav > li > a,
-    .nav > li > a:focus
+    .nav > li > a, .nav > li > a:focus
       color: $gray-darker
+
       &:hover
         color: $theme-primary
 
-// Homepage Header
 
+// Homepage Header
 header
   position: relative
   width: 100%
-  .background-cover
-    background: url("../img/header.jpg") center
-    text-align: center
-    color: white
+  @mixin background-cover
+  background: url("../img/header.jpg") center
+  text-align: center
+  color: white
+
   .header-content
     position: relative
     text-align: center
     padding: 100px 15px 100px
     width: 100%
+
     .header-content-inner
       h1
         font-weight: 700
@@ -143,44 +133,50 @@ header
         margin-top: 0
         margin-bottom: 0
         font-size: 30px
+
       hr
         margin: 30px auto
+
       p
         font-weight: 300
-        color: opacify(white, 70%)
+        color: opacify(white, 0.7)
         font-size: 16px
         margin-bottom: 50px
 
-@media (min-width: 768px)
-  min-height: 100%
-  .header-content
-    position: absolute
-    top: 50%
-    -webkit-transform: translateY(-50%)
-    -ms-transform: translateY(-50%)
-    transform: translateY(-50%)
-    padding: 0 50px
-    .header-content-inner
-      max-width: 1000px
-      margin-left: auto
-      margin-right: auto
-      h1
-        font-size: 50px
+  @media (min-width: 768px)
+    min-height: 100%
 
-      p
-        font-size: 18px
-        max-width: 80%
+    .header-content
+      position: absolute
+      top: 50%
+      -webkit-transform: translateY(-50%)
+      -ms-transform: translateY(-50%)
+      transform: translateY(-50%)
+      padding: 0 50px
+
+      .header-content-inner
+        max-width: 1000px
         margin-left: auto
         margin-right: auto
 
-// Sections
+        h1
+          font-size: 50px
 
+        p
+          font-size: 18px
+          max-width: 80%
+          margin-left: auto
+          margin-right: auto
+
+
+// Sections
 .section-heading
   margin-top: 0
 
 .service-box
   max-width: 400px
   margin: 50px auto 0
+
   @media (min-width: 992px)
     margin: 20px auto 0
 
@@ -192,35 +188,36 @@ header
   display: block
   max-width: 650px
   margin: 0 auto
+
   .portfolio-box-caption
     color: white
     opacity: 0
     display: block
-    background: opacify($theme-primary, 90%)
+    background: opacify($theme-primary, 0.9)
     position: absolute
     bottom: 0
     text-align: center
     width: 100%
     height: 100%
-    .transition-all
-      .portfolio-box-caption-content
-        width: 100%
-        text-align: center
-        position: absolute
-        top: 50%
-        transform: translateY(-50%)
-        .project-category,
-        .project-name
-          .sans-serif-font
-            padding: 0 15px
+    @include transition-all
+    .portfolio-box-caption-content
+      width: 100%
+      text-align: center
+      position: absolute
+      top: 50%
+      transform: translateY(-50%)
+      .project-category,
+      .project-name
+        @include sans-serif-font
+        padding: 0 15px
 
-        .project-category
-          text-transform: uppercase
-          font-weight: 600
-          font-size: 14px
+      .project-category
+        text-transform: uppercase
+        font-weight: 600
+        font-size: 14px
 
-        .project-name
-          font-size: 18px
+      .project-name
+        font-size: 18px
 
   &:hover
     .portfolio-box-caption
@@ -242,6 +239,7 @@ header
   h2
     margin: 0 auto 20px
 
+
 // Bootstrap Overrides
 .text-primary
   color: $theme-primary
@@ -249,6 +247,7 @@ header
 .no-gutter > [class*='col-']
   padding-right: 0
   padding-left: 0
+
 
 // Button Styles
 .btn-default
@@ -266,6 +265,7 @@ header
 
 .btn-xl
   padding: 15px 30px
+
 
 // Extras
 // -- Highlight Color Customization
