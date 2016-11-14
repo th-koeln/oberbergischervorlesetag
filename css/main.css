@@ -302,4 +302,7 @@ img::-moz-selection {
 body {
   webkit-tap-highlight-color: #222222; }
 
+.imprint {
+  border-top: 1px solid #222222; }
+
 /*# sourceMappingURL=main.css.map */
