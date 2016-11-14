@@ -119,7 +119,7 @@ header {
   header .header-content {
     position: relative;
     text-align: center;
-    padding: 100px 15px 100px;
+    padding: 100px 0;
     width: 100%; }
     header .header-content .header-content-inner {
       background-color: rgba(34, 34, 34, 0.55);
