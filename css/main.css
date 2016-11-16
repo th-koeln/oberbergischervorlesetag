@@ -43,11 +43,6 @@ section {
   position: relative;
   z-index: 10; }
 
-.logo {
-  max-height: 100px;
-  max-width: 300px;
-}
-
 aside {
   padding: 50px 0; }
 
@@ -315,5 +310,8 @@ body {
 @media (min-width: 768px) {
   section {
     padding: 150px 0; } }
+.logo {
+  max-height: 100px;
+  max-width: 300px; }
 
 /*# sourceMappingURL=main.css.map */
