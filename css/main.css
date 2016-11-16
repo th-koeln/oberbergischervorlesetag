@@ -43,6 +43,11 @@ section {
   position: relative;
   z-index: 10; }
 
+.logo {
+  max-height: 100px;
+  max-width: 300px;
+}
+
 aside {
   padding: 50px 0; }
 
