@@ -312,6 +312,10 @@ body {
     padding: 150px 0; } }
 .logo {
   max-height: 100px;
-  max-width: 300px; }
+  max-width: 250px; }
+
+th, td {
+  padding-bottom: 10px;
+  padding-right: 15px; }
 
 /*# sourceMappingURL=main.css.map */
