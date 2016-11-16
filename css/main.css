@@ -318,4 +318,14 @@ th, td {
   padding-bottom: 10px;
   padding-right: 15px; }
 
+.logos .row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap; }
+.logos .row > [class*='col-'] {
+  display: flex;
+  flex-direction: column; }
+
 /*# sourceMappingURL=main.css.map */
