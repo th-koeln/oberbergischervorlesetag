@@ -6,7 +6,7 @@ body {
   font-family: "Merriweather", "Helvetica Neue", Arial, sans-serif; }
 
 hr {
-  border: 3px #8D1600;
+  border: 3px #00699e;
   max-width: 50px; }
 
 hr.light {
@@ -16,9 +16,9 @@ a {
   -webkit-transition: all 0.35s;
   -moz-transition: all 0.35s;
   transition: all 0.35s;
-  color: #8D1600; }
+  color: #00699e; }
   a:hover, a:focus {
-    color: #5a0e00; }
+    color: #00476b; }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif; }
@@ -29,7 +29,7 @@ p {
   margin-bottom: 20px; }
 
 .bg-primary {
-  background-color: #8D1600; }
+  background-color: #00699e; }
 
 .bg-dark {
   background-color: #222222;
@@ -57,12 +57,12 @@ aside {
   -moz-transition: all 0.35s;
   transition: all 0.35s; }
   .navbar-default .navbar-header .navbar-brand {
-    color: #8D1600;
+    color: #00699e;
     font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif;
     font-weight: 600;
     text-transform: uppercase; }
     .navbar-default .navbar-header .navbar-brand:hover, .navbar-default .navbar-header .navbar-brand:focus {
-      color: #5a0e00; }
+      color: #00476b; }
   .navbar-default .navbar-header .navbar-toggle {
     font-weight: 700;
     font-size: 12px;
@@ -76,10 +76,10 @@ aside {
     color: #222222; }
     .navbar-default .nav > li > a:hover,
     .navbar-default .nav > li > a:focus:hover {
-      color: #8D1600; }
+      color: #00699e; }
   .navbar-default .nav > li.active > a,
   .navbar-default .nav > li.active > a:focus {
-    color: #8D1600 !important;
+    color: #00699e !important;
     background-color: transparent; }
     .navbar-default .nav > li.active > a:hover,
     .navbar-default .nav > li.active > a:focus:hover {
@@ -87,17 +87,17 @@ aside {
   @media (min-width: 768px) {
     .navbar-default {
       background-color: rgba(255, 255, 255, 0.85);
-      border-color: #8d1600; }
+      border-color: #00699e; }
       .navbar-default .navbar-header .navbar-brand {
-        color: #8D1600;
+        color: #00699e;
         font-size: 20px;
         font-weight: 600; }
         .navbar-default .navbar-header .navbar-brand:hover, .navbar-default .navbar-header .navbar-brand:focus {
-          color: #5a0e00; }
+          color: #00476b; }
       .navbar-default .nav > li > a, .navbar-default .nav > li > a:focus {
         color: #222222; }
         .navbar-default .nav > li > a:hover, .navbar-default .nav > li > a:focus:hover {
-          color: #8D1600; } }
+          color: #00699e; } }
 
 header {
   position: relative;
@@ -187,7 +187,7 @@ header {
     color: white;
     opacity: 0;
     display: block;
-    background: #8d1600;
+    background: #00699e;
     position: absolute;
     bottom: 0;
     text-align: center;
